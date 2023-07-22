@@ -1,0 +1,35 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.grid-template-areas{
+grid-template-areas :
+"sidenav main"
+"playing_now playing_now";
+}
+
+.grid-template-areas .content{
+grid-area:main;
+}
+.grid-template-areas .sise_nav{
+grid-area:sidenav;
+}
+.grid-template-areas .playing_now{
+grid-area:playing_now;
+}
+
+.track:hover .track_no , 
+.track.selected .track_no
+{
+visibility  : hidden; 
+}
+
+.track:hover  .play ,
+.track.selected .play{
+    visibility  : visible;
+}
+
+.track.playing .track_no , 
+.track.playing  .song-title{
+    color: theme("colors.green");
+}
